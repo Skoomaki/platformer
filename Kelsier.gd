@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var player_velocity = Vector2(0,-1)
 
-const SPEED = 230
+const SPEED = 300
 const NORMAL_JUMP_HEIGHT = -1000
 const GRAVITY = 37
 
@@ -27,4 +27,4 @@ func _physics_process(delta):
 		
 	player_velocity = move_and_slide(player_velocity, Vector2.UP)
 
-	player_velocity.x = lerp(player_velocity.x,0,0.11)
+	player_velocity.x = lerp(player_velocity.x,0,0.89)
