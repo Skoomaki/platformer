@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
 var player_velocity = Vector2(0,-1)
-
+var COUNT_DOUBLE_JUMP = 0
+var EXTRA_JUMP = 1
 const SPEED = 400
 const NORMAL_JUMP_HEIGHT = -700
-const GRAVITY = 37
-var COUNT_DOUBLE_JUMP = 0
+const GRAVITY = 38
 
 func _physics_process(delta):
 	if Input.is_action_pressed("player_right"): 
@@ -19,8 +19,8 @@ func _physics_process(delta):
 	else:
 		$Sprite.play("idle")
 	if not is_on_floor():
-			$Sprite.play("air")
-	if Input.is_action_just_pressed("player_jump") && COUNT_DOUBLE_JUMP < 1:
+		$Sprite.play("air")
+	if Input.is_action_just_pressed("player_jump") && COUNT_DOUBLE_JUMP < EXTRA_JUMP:
 		player_velocity.y = NORMAL_JUMP_HEIGHT
 		COUNT_DOUBLE_JUMP += 1
 		
