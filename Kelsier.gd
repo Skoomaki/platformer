@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var player_velocity = Vector2(0,-1)
 
-const SPEED = 300
+const SPEED = 400
 const NORMAL_JUMP_HEIGHT = -1000
 const GRAVITY = 37
 
