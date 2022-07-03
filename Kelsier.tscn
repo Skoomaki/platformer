@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 26.5
-height = 14.0
+height = 13.0
 
 [node name="Kelsier" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -16,5 +16,5 @@ animation = "idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, 15 )
+position = Vector2( 0, 15 )
 shape = SubResource( 1 )
